@@ -11,6 +11,9 @@ class Spice():
 	def getID(self):
 		return self.spiceID
 		
+	def setID(self, spiceID):
+		self.spiceID = spiceID
+		
 	def getName(self):
 		return self.name
 	
@@ -20,8 +23,14 @@ class Spice():
 	def getDispenserInfo(self):
 		return self.dispenserInfo
 	
+	def setDispenserInfo(self, dispenserInfo):
+		self.dispenserInfo = dispenserInfo
+	
 	def getSensorInfo(self):
 		return self.sensorInfo
+	
+	def setSensorInfo(self, sensorInfo):
+		self.sensorInfo = sensorInfo
 		
 	def getBlend(self):
 		return self.blend
@@ -39,6 +48,9 @@ class Spice():
 	def readSensor(self):
 		print("Coming Soon: Actual functioning sensors!")
 		return 0
+	
+	def toString(self):
+		return "ID: %s\nName: %s\nDispenser: %s\nSensor: %s\nBlend: %s\n" % (self.getID(), self.getName(), self.getDispenserInfo(), self.getSensorInfo(), self.getBlend()) 
 
 #test = Spice(42, "Spaghetti", "This is the dispenser info", "This is the sensor infor", "This is spaghetti, I don't know what you want.")
 #print(test.getName())
